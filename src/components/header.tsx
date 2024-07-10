@@ -22,6 +22,20 @@ const Header: React.FC = () => {
         </div>
 
         <div className="name_date">
+          <button
+            style={{
+              paddingRight: 40,
+              paddingLeft: 6,
+              background: "none",
+              borderRadius: 6,
+              borderWidth: 1,
+              cursor: "pointer",
+              marginRight: "1rem",
+            }}
+            onClick={() => navigate("/search")}
+          >
+            Search...
+          </button>
           <p className="name" onClick={handleDropDown}>
             {user?.user.Name}
           </p>

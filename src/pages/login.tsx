@@ -6,7 +6,6 @@ import "./auth.scss";
 import { LoginInterface } from "../models/user";
 import USER_APIs from "../api/user_api";
 import LoadingEffect from "../utils/loading/loading";
-import { AxiosError } from "axios";
 
 const LoginPage: React.FC = () => {
   const [formData, setFormData] = useState<LoginInterface>({

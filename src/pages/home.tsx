@@ -16,7 +16,7 @@ const HomePage: React.FC = () => {
   const [loading, setLoading] = useState<boolean>(false);
 
   useEffect(() => {
-    const fetchAllUserTodos = async () => {
+    const fetchTodos = async () => {
       try {
         setLoading(true);
         await TODO_APIs.all_your_todos(user?.token as string).then(
@@ -34,7 +34,7 @@ const HomePage: React.FC = () => {
     };
     setTotalDone(todos.filter((item) => item.Status == "done").length);
     setTotalUpcoming(todos.filter((item) => item.Status == "upcoming").length);
-    fetchAllUserTodos();
+    fetchTodos();
   }, []);
 
   const [upcomingList, setUpcomingList] = useState(

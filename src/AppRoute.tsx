@@ -11,6 +11,7 @@ import ProtectedRoute from "./utils/route_utils/protected_routes";
 import { useUserStore } from "./store/user_store";
 import ForgetPasswordPage from "./pages/forget_password";
 import NewPasswordPage from "./pages/new_password";
+import Search from "./pages/search";
 
 const AppRouter = () => {
   const { user } = useUserStore();
@@ -29,6 +30,7 @@ const AppRouter = () => {
             <Route path="/add" element={<AddPage />} />
             <Route path="/detail" element={<DetailPage />} />
             <Route path="/update" element={<UpdatePage />} />
+            <Route path="/search" element={<Search />} />
           </Route>
         </Route>
         <Route
