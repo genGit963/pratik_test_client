@@ -1,0 +1,6 @@
+@use "../global" as theme;
+
+.auth_container{
+    @include theme.container_constraints;
+    // border: 1px solid;
+}

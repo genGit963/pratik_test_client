@@ -1,0 +1,7 @@
+@use "../global" as theme;
+
+.app_container{
+    @include theme.container_constraints;
+    // border: 1px solid;
+    margin-top: 80px; // from navbar
+}

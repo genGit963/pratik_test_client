@@ -1,0 +1,269 @@
+@use "../global"as theme;
+
+.navbar {
+    border-bottom: 1px solid theme.$mute_color;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    box-shadow: 0px 1px 10px theme.$mute_color;
+    background-color: #fff;
+    z-index: 20;
+
+    .header_container {
+        @include theme.container_constraints;
+        padding: 5px 0px;
+
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+        .logo {
+            // padding: 4px 0px;
+            align-items: center;
+            display: flex;
+            flex-direction: row;
+            cursor: pointer;
+
+            .company {
+                text-align: center;
+                padding-right: 5px;
+                font-weight: 600;
+            }
+
+            .app {
+                color: theme.$primary_color;
+                padding-left: 5px;
+                font-weight: 600;
+
+            }
+        }
+
+        .name_date {
+            align-items: center;
+            display: flex;
+            flex-direction: row;
+
+            .name {
+                font-weight: 600;
+                font-size: 16px;
+                margin-right: 40px;
+                padding: 0px 8px;
+                border-radius: 5px;
+            }
+
+            .name:hover {
+                background-color: theme.$primary_color;
+                cursor: pointer;
+                color: #fff;
+            }
+
+            .today {
+                justify-content: right;
+                color: theme.$primary_color;
+            }
+        }
+
+        .drop_down_show {
+            border: 2px solid theme.$primary_color;
+            box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.651);
+            padding: 5px 10px;
+            border-radius: 10px;
+            z-index: 30;
+            background-color: #fff;
+            transition: 0.4s ease-in-out;
+
+            position: absolute;
+            right: 18%;
+            top: 120%;
+
+            p {
+                padding: 5px 10px;
+                text-align: center;
+                border-radius: 4px;
+                font-weight: 13px;
+            }
+
+            .name {
+                font-weight: 600;
+                color: theme.$primary_color;
+            }
+
+            .since {
+                font-size: 14px;
+
+                span {
+                    color: theme.$complete_color;
+
+                }
+            }
+
+            .line {
+                height: 0px;
+                border-top: 1px solid theme.$mute_color;
+            }
+
+            .log_out {
+                margin-top: 5px;
+            }
+
+            .log_out:hover {
+                cursor: pointer;
+                color: white;
+                background-color: theme.$primary_color;
+            }
+
+            p:hover {
+                cursor: pointer;
+                text-decoration: underline;
+                color: theme.$primary_color;
+            }
+        }
+
+        .drop_down_hide {
+            border: 2px solid theme.$mute_color;
+            box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.13);
+            padding: 5px 10px;
+            border-radius: 10px;
+            z-index: 30;
+            transition: 0.2s ease-in-out;
+
+            position: absolute;
+            right: -100%;
+            top: 120%;
+        }
+    }
+}
+
+@media (max-width: theme.$mobile_tab) {
+    .navbar {
+        @include theme.container_constraints(theme.$mobile_tab);
+
+        border-bottom: 1px solid theme.$mute_color;
+        position: fixed;
+        top: 0px;
+        left: 0px;
+        right: 0px;
+
+        box-shadow: 0px 1px 10px theme.$mute_color;
+        background-color: #fff;
+        z-index: 20;
+
+        height: 40px;
+
+        .header_container {
+            padding: 5px 0px;
+
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            .logo {
+                align-items: center;
+                display: flex;
+                flex-direction: row;
+                cursor: pointer;
+
+                .company {
+                    text-align: center;
+                    font-weight: 600;
+                }
+
+                .app {
+                    display: none;
+                }
+            }
+
+            .name_date {
+                align-items: center;
+                display: flex;
+                flex-direction: row;
+
+                .name {
+                    font-weight: 600;
+                    font-size: 16px;
+                    border-radius: 5px;
+                }
+
+                .name:hover {
+                    background-color: theme.$primary_color;
+                    cursor: pointer;
+                    color: #fff;
+                }
+
+                .today {
+                    display: none;
+                }
+            }
+
+            .drop_down_show {
+                border: 2px solid theme.$primary_color;
+                box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.651);
+                padding: 5px 10px;
+                border-radius: 10px;
+                z-index: 30;
+                background-color: #fff;
+                transition: 0.4s ease-in-out;
+
+                position: absolute;
+                right: 18%;
+                top: 120%;
+
+                p {
+                    padding: 5px 10px;
+                    text-align: center;
+                    border-radius: 4px;
+                    font-weight: 13px;
+                }
+
+                .name {
+                    font-weight: 600;
+                    color: theme.$primary_color;
+                }
+
+                .since {
+                    font-size: 14px;
+
+                    span {
+                        color: theme.$complete_color;
+
+                    }
+                }
+
+                .line {
+                    height: 0px;
+                    border-top: 1px solid theme.$mute_color;
+                }
+
+                .log_out {
+                    margin-top: 5px;
+                }
+
+                .log_out:hover {
+                    cursor: pointer;
+                    color: white;
+                    background-color: theme.$primary_color;
+                }
+
+                p:hover {
+                    cursor: pointer;
+                    text-decoration: underline;
+                    color: theme.$primary_color;
+                }
+            }
+
+            .drop_down_hide {
+                border: 2px solid theme.$mute_color;
+                box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.13);
+                padding: 5px 10px;
+                border-radius: 10px;
+                z-index: 30;
+                transition: 0.2s ease-in-out;
+
+                position: absolute;
+                right: -100%;
+                top: 120%;
+            }
+        }
+    }
+
+}

@@ -1,0 +1,82 @@
+@use "../global" as theme;
+
+// -------------- todo card -------------
+.todo_card {
+  border: 1.5px solid theme.$mute_color;
+  border-radius: 12px;
+  width: 90%;
+  padding: 10px;
+
+  display: flex;
+  flex-direction: row;
+  gap: 14px;
+
+  .ring_done {
+    border: 3.5px solid theme.$complete_color;
+    height: 14px;
+    width: 14px;
+    margin: 2px;
+    border-radius: 10px;
+    background-color: #fff;
+  }
+
+  .ring_upcoming {
+    border: 3.5px solid theme.$upcoming_color;
+    height: 14px;
+    width: 14px;
+    margin: 2px;
+    border-radius: 50%;
+    background-color: #fff;
+  }
+
+  .todo_detail {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+
+    .title {
+      font-weight: 600;
+      font-size: 18px;
+    }
+
+    .short_des {
+      color: theme.$mute_text_color;
+    }
+
+    .status {
+      font-size: 13px;
+
+      .status_done {
+        color: theme.$complete_color;
+        font-weight: 600;
+      }
+
+      .status_upcoming {
+        // color: theme.$primary_color;
+        color: #2a2fc4aa;
+        font-weight: 600;
+      }
+    }
+
+    .dates {
+      text-align: left;
+      color: theme.$mute_text_color;
+      font-size: 12px;
+
+      .deadline {
+        font-weight: 500;
+        color: black;
+
+        span {
+          color: theme.$upcoming_color;
+        }
+      }
+    }
+  }
+}
+
+.todo_card:hover {
+  cursor: pointer;
+  box-shadow: 1px 1px 5px #2a2fc447;
+  background-color: #fff;
+}

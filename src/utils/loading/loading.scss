@@ -1,0 +1,110 @@
+@use "../../global" as theme;
+
+.loading_container {
+    @include theme.container_constraints;
+    margin-top: 200px;
+
+    .dots {
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+        justify-content: center;
+        
+        .dot {
+            // border: 1px solid;
+            height: 30px;
+            width: 30px;
+
+            border-radius: 50%;
+            align-content: center;
+            text-align: center;
+            font-size: large;
+            background-color: theme.$primary_color;
+            color: white;
+            font-weight: 600;
+            box-shadow: 1px 10px 20px rgba(128, 128, 128, 0.723);
+
+            animation: wave 1000ms infinite alternate;
+        }
+
+        @keyframes wave {
+            0% {
+                // rotate: 180deg;
+                // transform: translateY(50px); //transverse wave
+                transform: translate(40px); // longitudnal wave
+            }
+
+            100% {
+                // rotate: 360deg;
+                // transform: translateY(-100px); //transverse wave
+                transform: translate(-40px); // longitudnal wave
+            }
+
+        }
+
+        @for $i from 1 through 10 {
+            .dot:nth-child(#{$i}){
+                animation-delay: 80ms * $i;
+            }
+        }
+    }
+
+    .title{
+        margin-top: 10px;
+        text-align: center;
+
+    }
+}
+
+@media (max-width: theme.$mobile_tab ){
+
+    .loading_container {
+    @include theme.container_constraints;
+    margin-top: 200px;
+    // border: 1px solid;
+
+    .dots {
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+        justify-content: center;
+
+        .dot {
+            // border: 1px solid;
+            height: 15px;
+            width: 15px;
+
+            border-radius: 50%;
+            align-content: center;
+            text-align: center;
+            font-size: small;
+            background-color: theme.$primary_color;
+            color: white;
+            font-weight: 400;
+            box-shadow: 1px 10px 30px rgba(128, 128, 128, 0.723);
+
+            animation: wave 1000ms infinite alternate;
+        }
+
+        @keyframes wave {
+            0% {
+                // rotate: 180deg;
+                transform: translate(-40px);
+            }
+
+            100% {
+                // rotate: 360deg;
+                transform: translate(40px);
+            }
+
+        }
+
+        @for $i from 1 through 10 {
+            .dot:nth-child(#{$i}){
+                animation-delay: 100ms * $i;
+            }
+        }
+    }
+}
+
+}

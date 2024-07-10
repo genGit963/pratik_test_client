@@ -1,0 +1,8 @@
+@use "./global"as theme;
+
+.main_app {
+    min-height: 100vh;
+    margin: 0px;
+    padding: 0px;
+    font-family: theme.$google-font;
+}

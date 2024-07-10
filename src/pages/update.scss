@@ -1,0 +1,108 @@
+@use "../global"as theme;
+
+.update_page {
+
+    .heading {
+        font-weight: 500;
+        font-size: 25px;
+        margin-bottom: 20px;
+        color: theme.$primary_color;
+    }
+
+    .update_container {
+
+        .update_form {
+
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            gap: 30px;
+
+            .title {
+                width: 70%;
+                height: 30px;
+                font-size: 18px;
+                color: black;
+                padding: 10px;
+                font-weight: 600;
+                border-radius: 10px;
+            }
+
+            .description {
+                width: 70%;
+                height: 60px;
+                font-size: 18px;
+                color: theme.$mute_text_color;
+                padding: 10px;
+                font-weight: 400;
+                border-radius: 10px;
+                border: 2px solid;
+            }
+
+            .status {
+
+                select {
+                    border: 2px solid theme.$mute_color;
+                    border-radius: 5px;
+                    width: 10%;
+                }
+            }
+
+            .add_it_btn {
+                padding: 2px 5px;
+                border: 1.5px solid theme.$primary_color;
+                border-radius: 5px;
+                margin: 10px auto;
+                width: 100px;
+                cursor: pointer;
+                background-color: theme.$primary_color;
+                color: #fff;
+                margin-left: 0px;
+            }
+
+            .p_date {
+                color: black;
+                margin-bottom: 20px;
+            }
+
+            .deadline_pick {
+                color: theme.$upcoming_color;
+
+
+
+                .date {
+                    border: 2px solid theme.$upcoming_color;
+                    border-radius: 5px;
+                }
+
+                .time {
+                    border: 2px solid theme.$upcoming_color;
+                    border-radius: 5px;
+                    width: 90px;
+                }
+
+                input:hover {
+                    border: 2px solid theme.$complete_color;
+                    border-radius: 5px;
+                    cursor: pointer;
+                }
+            }
+
+            .today {
+                color: theme.$complete_color;
+                font-size: 14px;
+            }
+
+            .add_it_btn:active {
+                box-shadow: 1px 1px 10px theme.$mute_color;
+
+                color: theme.$primary_color;
+                background-color: #fff;
+            }
+
+
+
+
+        }
+    }
+}
