@@ -29,7 +29,7 @@ const LoginPage: React.FC = () => {
         navigate("/");
       });
     } catch (error) {
-      setError(String("User not found, Do register first?"));
+      setError(String(error));
     } finally {
       setLoading(false);
     }
