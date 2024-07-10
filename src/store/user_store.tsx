@@ -23,7 +23,7 @@ export const useUserStore = create<UserStore & Action>()(
       },
     }),
     {
-      name: "Mero-Kaam_user",
+      name: "Todo_user",
       storage: createJSONStorage(() => localStorage),
       version: import.meta.env.VITE_APP_VERSION,
     }

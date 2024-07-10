@@ -37,7 +37,7 @@ const AppRouter = () => {
           path="*"
           element={
             <h1 style={{ textAlign: "center", margin: "150px" }}>
-              Mero-Kaam : 404 !! Page not found
+              Todo : 404 !! Page not found
             </h1>
           }
         />

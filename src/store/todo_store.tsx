@@ -25,7 +25,7 @@ export const useTodoStore = create<TodoStore & Action>()(
       },
     }),
     {
-      name: "Mero-Kaam_todo",
+      name: "Todo_todo",
       storage: createJSONStorage(() => localStorage),
       version: import.meta.env.VITE_APP_VERSION,
     }

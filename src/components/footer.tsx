@@ -5,7 +5,7 @@ const Footer: React.FC = () => {
   return (
     <footer>
       <div className="footer_container">
-        <p className="company">Mero-Kaam</p>
+        <p className="company">Todo</p>
 
         <div className="candidate">
           <p>An assessment submitted by</p>

@@ -41,7 +41,7 @@ const LoginPage: React.FC = () => {
         <LoadingEffect />
       ) : (
         <div className="login_container">
-          <h1>Mero-Kaam</h1>
+          <h1>Todo</h1>
           <h2>LOGIN</h2>
           <form onSubmit={handleSubmit} className="login_from">
             <input
@@ -72,7 +72,7 @@ const LoginPage: React.FC = () => {
           </form>
 
           <p className="to_signup">
-            Not a member of Mero-Kaam todo?{" "}
+            Not a member of TODO?{" "}
             <span onClick={() => navigate("/signup")}>Sign Up</span>
           </p>
 

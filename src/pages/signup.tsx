@@ -42,7 +42,7 @@ const SignUpPage: React.FC = () => {
         <LoadingEffect />
       ) : (
         <div className="login_container">
-          <h1>Mero-Kaam</h1>
+          <h1>Todo</h1>
           <h2>SIGN UP</h2>
           <form onSubmit={handleSubmit} className="login_from">
             <input

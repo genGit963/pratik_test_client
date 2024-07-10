@@ -18,7 +18,7 @@ const Header: React.FC = () => {
     <header className="navbar">
       <div className="header_container">
         <div className="logo" onClick={() => navigate("/")}>
-          <h1 className="company">Mero-Kaam</h1>
+          <h1 className="company">Todo</h1>
         </div>
 
         <div className="name_date">

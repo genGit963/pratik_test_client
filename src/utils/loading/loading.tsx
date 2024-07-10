@@ -16,7 +16,7 @@ const LoadingEffect = (): React.JSX.Element => {
         <div className="dot">.</div>
         <div className="dot">.</div>
       </div>
-      <p className="title">-------- Mero-Kaam -------- </p>
+      <p className="title">-------- Todo -------- </p>
     </section>
   );
 };

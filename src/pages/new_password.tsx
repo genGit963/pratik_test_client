@@ -40,7 +40,7 @@ const NewPasswordPage: React.FC = () => {
         <LoadingEffect />
       ) : (
         <div className="login_container">
-          <h1>Mero-Kaam TODO </h1>
+          <h1>TODO </h1>
           <h2>New Password</h2>
           <form onSubmit={handleSubmit} className="login_from">
             <input
